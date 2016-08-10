@@ -136,6 +136,7 @@ public:
     double   readTemp(tempSrc_t tsrc, tempUnit_t tunit);
     double   convKtoC(double degK);
     double   convCtoF(double degC);
+    uint16_t read16(uint8_t cmd);
 
 private:
     uint8_t  _rwError;                                      /**< R/W error flags (private copyl) */
@@ -144,7 +145,6 @@ private:
     uint8_t  _addr;                                         /**< Slave address (private copy) */
 
     float    readTemp(uint8_t reg);
-    uint16_t read16(uint8_t cmd);
     void     write16(uint8_t cmd, uint16_t data);
 
     uint8_t  getRwError()       {return _rwError;}          /**< R/W error flags getter */
