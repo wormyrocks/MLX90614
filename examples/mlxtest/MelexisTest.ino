@@ -43,7 +43,7 @@
 #include "MelexisTest.h"
 #include "printf.h"
 
-MLX90614 mlx = MLX90614(MLX90614_BROADCASTADDR);      // *** must be only one device on bus ***
+MLX90614 mlx = MLX90614(MLX90614_I2CDEFAULTADDR);      // *** must be only one device on bus ***
 
 /*********************************************************************************************/
 /* PROGRAM SETUP                                                                             */
